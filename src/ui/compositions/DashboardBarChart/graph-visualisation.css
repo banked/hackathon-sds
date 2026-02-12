@@ -1,0 +1,52 @@
+.graph-visualisation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+  padding-block: var(--sds-size-space-800);
+  width: 100%;
+}
+
+.graph-visualisation-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.graph-visualisation-graph {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+  align-items: flex-start;
+  padding-inline: var(--sds-size-space-800);
+  width: 100%;
+}
+
+.graph-visualisation-key {
+  display: flex;
+  gap: var(--sds-size-space-600);
+  align-items: flex-start;
+}
+
+.graph-visualisation-chart {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.graph-visualisation-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-visualisation-date-bar {
+  display: flex;
+  gap: var(--sds-size-space-600);
+  align-items: flex-start;
+  padding-inline: var(--sds-size-space-800);
+  width: 100%;
+}
+
+.graph-visualisation-date-bar .graph-date-label:first-child {
+  flex: 1 0 0;
+}

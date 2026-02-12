@@ -1,0 +1,8 @@
+.keyline-divider {
+  --keyline-divider-color: var(--mcp-color-foreground-primary-keyline);
+
+  border: none;
+  border-top: var(--sds-size-stroke-border) solid var(--keyline-divider-color);
+  margin: 0;
+  width: 100%;
+}

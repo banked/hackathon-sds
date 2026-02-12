@@ -1,4 +1,7 @@
 export * from "./Cards/Cards";
+export * from "./DashboardBarChart/DashboardBarChart";
+export * from "./DashboardBarChart/GraphHeader";
+export * from "./DashboardBarChart/GraphVisualisation";
 export * from "./Footers/Footers";
 export * from "./Forms/Forms";
 export * from "./Headers/Headers";

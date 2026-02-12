@@ -1,4 +1,4 @@
-import { figma } from "@figma/code-connect";
-import { Footer } from "compositions";
+// import { figma } from "@figma/code-connect";
+// import { Footer } from "compositions";
 
-figma.connect(Footer, "<FIGMA_SECTIONS_FOOTER>");
+// figma.connect(Footer, "<FIGMA_SECTIONS_FOOTER>");

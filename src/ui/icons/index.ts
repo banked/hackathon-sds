@@ -1,3 +1,4 @@
+export { AIIcon } from "./AIIcon.tsx";
 export { IconActivity } from "./IconActivity.tsx";
 export { IconAirplay } from "./IconAirplay.tsx";
 export { IconAlertCircle } from "./IconAlertCircle.tsx";

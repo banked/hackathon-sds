@@ -1,0 +1,84 @@
+.ai-button {
+  --ai-button-border-width: 2px;
+  --ai-button-text-color: var(--mcp-color-foreground-ai-highlight-900);
+  --ai-button-icon-color: var(--mcp-color-foreground-ai-highlight-900);
+  --ai-button-border-radius: var(--sds-size-radius-full);
+  --ai-button-gradient: var(--mcp-color-surface-primary-gradient);
+  --ai-button-background: var(--mcp-color-surface-primary-light);
+
+  align-items: center;
+  background:
+    linear-gradient(
+        var(--ai-button-background),
+        var(--ai-button-background)
+      )
+      padding-box,
+    var(--ai-button-gradient) border-box;
+  border: var(--ai-button-border-width) solid transparent;
+  border-radius: var(--ai-button-border-radius);
+  color: var(--ai-button-text-color);
+  cursor: pointer;
+  display: inline-flex;
+  font: var(--mcp-font-small-body);
+  gap: var(--sds-size-space-100);
+  justify-content: center;
+  line-height: 1.43;
+  overflow: clip;
+  padding: var(--sds-size-space-200) var(--sds-size-space-600);
+  position: relative;
+  white-space: nowrap;
+
+  > .icon {
+    --icon-color: var(--ai-button-icon-color);
+    color: var(--ai-button-icon-color);
+  }
+}
+
+.ai-button[data-hovered]:not([data-disabled]) {
+  --ai-button-background: var(--mcp-color-surface-primary-muted);
+}
+
+.ai-button[data-pressed]:not([data-disabled]) {
+  --ai-button-background: var(--mcp-color-surface-primary-muted);
+}
+
+.ai-button[data-focus-visible] {
+  outline: none;
+  --offset: calc(var(--ai-button-border-width) + var(--sds-size-stroke-border));
+
+  &::before {
+    content: "";
+    border-radius: calc(var(--ai-button-border-radius) + var(--offset));
+    bottom: calc(-1 * var(--offset));
+    box-shadow: 0 0 0 var(--global-focus-ring-size)
+      var(--global-focus-ring-color);
+    left: calc(-1 * var(--offset));
+    position: absolute;
+    right: calc(-1 * var(--offset));
+    top: calc(-1 * var(--offset));
+  }
+}
+
+.ai-button[data-disabled] {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.ai-button-size-small {
+  font: var(--sds-font-body-small);
+  padding: var(--sds-size-space-100) var(--sds-size-space-400);
+
+  > .icon {
+    --icon-diameter: var(--sds-typography-scale-02);
+  }
+}
+
+.ai-button-size-medium {
+  font: var(--sds-font-body-small);
+  padding: var(--sds-size-space-200) var(--sds-size-space-600);
+
+  > .icon {
+    --icon-diameter: var(--sds-typography-scale-03);
+  }
+}

@@ -524,3 +524,57 @@
   --sds-effects-filter-blur-layer: blur(var(--sds-size-blur-100));
   --sds-effects-backdrop-filter-blur-glass: blur(var(--sds-size-blur-100));
 }
+
+/* =============================================
+ * MCP Design System Tokens
+ * Source: https://www.figma.com/design/RunXbtjgAaAIsNgvyEndOD/MCP-Design-System?node-id=2-116
+ * ============================================= */
+
+/* mcp_color: foreground tokens */
+:root {
+  --mcp-color-foreground-primary-dark: #111111;
+  --mcp-color-foreground-primary-light: #fcfcfc;
+  --mcp-color-foreground-secondary-dark: #7c7c7c;
+  --mcp-color-foreground-primary-keyline: #cccccc;
+  --mcp-color-foreground-primary-highlight-900: #008d8b;
+  --mcp-color-foreground-primary-highlight-100: #99d8d7;
+  --mcp-color-foreground-ai-highlight-900: #45207e;
+  --mcp-color-foreground-ai-highlight-100: #d0b2fe;
+}
+
+/* mcp_color: surface tokens */
+:root {
+  --mcp-color-surface-primary-muted: #f3f3f3;
+  --mcp-color-surface-primary-light: #ffffff;
+  --mcp-color-surface-primary-gradient: linear-gradient(to right, #0f1e3d, #5e2d91, #b8326d);
+}
+
+/* mcp_color: keyline tokens */
+:root {
+  --mcp-color-keyline-default: #cccccc;
+}
+
+/* mcp_typography: font family */
+:root {
+  --mcp-typography-family-sans: "Geist", sans-serif;
+}
+
+/* mcp_typography: title-text */
+:root {
+  --mcp-typography-title-text-font-family: var(--mcp-typography-family-sans);
+  --mcp-typography-title-text-font-weight: 500;
+  --mcp-typography-title-text-font-size: 1.125rem;
+  --mcp-typography-title-text-line-height: 1.75rem;
+  --mcp-typography-title-text-letter-spacing: 0;
+  --mcp-font-title-text: normal var(--mcp-typography-title-text-font-weight) var(--mcp-typography-title-text-font-size) / var(--mcp-typography-title-text-line-height) var(--mcp-typography-title-text-font-family);
+}
+
+/* mcp_typography: small-body */
+:root {
+  --mcp-typography-small-body-font-family: var(--mcp-typography-family-sans);
+  --mcp-typography-small-body-font-weight: 400;
+  --mcp-typography-small-body-font-size: 0.875rem;
+  --mcp-typography-small-body-line-height: 1.25rem;
+  --mcp-typography-small-body-letter-spacing: 0;
+  --mcp-font-small-body: normal var(--mcp-typography-small-body-font-weight) var(--mcp-typography-small-body-font-size) / var(--mcp-typography-small-body-line-height) var(--mcp-typography-small-body-font-family);
+}

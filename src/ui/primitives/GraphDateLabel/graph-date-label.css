@@ -1,0 +1,5 @@
+.graph-date-label {
+  font: var(--mcp-font-small-body);
+  color: var(--mcp-color-foreground-primary-dark);
+  white-space: nowrap;
+}
