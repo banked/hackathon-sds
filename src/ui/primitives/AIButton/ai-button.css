@@ -1,16 +1,14 @@
 .ai-button {
   --ai-button-border-width: 2px;
-  --ai-button-text-color: var(--mcp-color-foreground-primary-light);
-  --ai-button-icon-color: var(--mcp-color-foreground-primary-light);
+  --ai-button-icon-color: #0f1e3d;
   --ai-button-border-color: #0f1e3d;
   --ai-button-border-radius: var(--sds-size-radius-full);
-  --ai-button-background: var(--mcp-color-foreground-primary-highlight-100);
+  --ai-button-background: var(--mcp-color-foreground-primary-light);
 
   align-items: center;
   background: var(--ai-button-background);
   border: var(--ai-button-border-width) solid var(--ai-button-border-color);
   border-radius: var(--ai-button-border-radius);
-  color: var(--ai-button-text-color);
   cursor: pointer;
   display: inline-flex;
   font: var(--mcp-font-small-body);
@@ -26,6 +24,13 @@
     --icon-color: var(--ai-button-icon-color);
     color: var(--ai-button-icon-color);
   }
+}
+
+.ai-button-text {
+  background: var(--mcp-color-surface-primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ai-button[data-hovered]:not([data-disabled]) {

@@ -35,7 +35,7 @@ export const AIButton = React.forwardRef(function AIButton(
   const content = (
     <>
       <AIIcon size={iconSize} />
-      {children}
+      {children && <span className="ai-button-text">{children}</span>}
     </>
   );
 
