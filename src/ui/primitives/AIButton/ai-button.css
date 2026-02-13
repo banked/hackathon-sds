@@ -1,20 +1,14 @@
 .ai-button {
   --ai-button-border-width: 2px;
-  --ai-button-text-color: var(--mcp-color-foreground-ai-highlight-900);
-  --ai-button-icon-color: var(--mcp-color-foreground-ai-highlight-900);
+  --ai-button-text-color: var(--mcp-color-foreground-primary-light);
+  --ai-button-icon-color: var(--mcp-color-foreground-primary-light);
+  --ai-button-border-color: #0f1e3d;
   --ai-button-border-radius: var(--sds-size-radius-full);
-  --ai-button-gradient: var(--mcp-color-surface-primary-gradient);
-  --ai-button-background: var(--mcp-color-surface-primary-light);
+  --ai-button-background: var(--mcp-color-foreground-primary-highlight-100);
 
   align-items: center;
-  background:
-    linear-gradient(
-        var(--ai-button-background),
-        var(--ai-button-background)
-      )
-      padding-box,
-    var(--ai-button-gradient) border-box;
-  border: var(--ai-button-border-width) solid transparent;
+  background: var(--ai-button-background);
+  border: var(--ai-button-border-width) solid var(--ai-button-border-color);
   border-radius: var(--ai-button-border-radius);
   color: var(--ai-button-text-color);
   cursor: pointer;
@@ -75,10 +69,10 @@
 }
 
 .ai-button-size-medium {
-  font: var(--sds-font-body-small);
+  font: var(--mcp-font-small-body);
   padding: var(--sds-size-space-200) var(--sds-size-space-600);
 
   > .icon {
-    --icon-diameter: var(--sds-typography-scale-03);
+    --icon-diameter: 2rem;
   }
 }
