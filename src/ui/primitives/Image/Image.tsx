@@ -33,14 +33,3 @@ export function Image({
     </>
   );
 }
-
-export type PictureProps = ComponentPropsWithoutRef<"picture">;
-export function Picture({ className, ...props }: PictureProps) {
-  const classNames = clsx(className, "picture");
-  return <picture className={classNames} {...props} />;
-}
-
-export type PictureSourceProps = ComponentPropsWithoutRef<"source">;
-export function PictureSource({ ...props }: PictureSourceProps) {
-  return <source {...props} />;
-}
