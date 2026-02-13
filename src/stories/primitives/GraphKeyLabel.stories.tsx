@@ -25,6 +25,7 @@ export const Default: StoryObj<typeof GraphKeyLabel> = {
 };
 
 export const CustomColor: StoryObj<typeof GraphKeyLabel> = {
+  name: "Custom Color",
   args: {
     children: "Revenue",
     color: "#45207e",
@@ -32,6 +33,7 @@ export const CustomColor: StoryObj<typeof GraphKeyLabel> = {
 };
 
 export const MultipleKeys: StoryObj<typeof GraphKeyLabel> = {
+  name: "Multiple Keys",
   render: () => (
     <Flex direction="row" gap="600" alignSecondary="center">
       <GraphKeyLabel>Series A</GraphKeyLabel>
