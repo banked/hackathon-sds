@@ -25,7 +25,14 @@ figma.connect(
   "https://www.figma.com/design/RunXbtjgAaAIsNgvyEndOD/MCP-Design-System?node-id=3-143&m=dev",
   {
     example: () => (
-      <GraphHeader title={"Title text"} aiButtonLabel="Analyse" />
+      <GraphHeader
+        title="Title text"
+        aiButtons={[
+          { label: "Analyse" },
+          { label: "Analyse" },
+          { label: "Analyse" },
+        ]}
+      />
     ),
   },
 );
