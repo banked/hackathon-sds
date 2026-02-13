@@ -14,10 +14,10 @@
   gap: var(--sds-size-space-600);
   padding-inline: var(--sds-size-space-800);
   width: 100%;
+  justify-content: space-between;
 }
 
 .graph-header-title {
-  flex: 1 0 0;
   font: var(--mcp-font-title-text);
   color: var(--mcp-color-foreground-primary-dark);
 }
