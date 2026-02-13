@@ -13,7 +13,7 @@ figma.connect(
       <DashboardBarChart
         title="Title text"
         aiButtonLabel="Analyse"
-        keys={[{ label: "Label" }, { label: "Label" }]}
+        keys={[{ label: "Label" }, { label: "Label" }, { label: "Label" }]}
         dates={[{ label: "01 Aug" }, { label: "01 Aug" }]}
       />
     ),
@@ -43,7 +43,7 @@ figma.connect(
   {
     example: () => (
       <GraphVisualisation
-        keys={[{ label: "Label" }, { label: "Label" }]}
+        keys={[{ label: "Label" }, { label: "Label" }, { label: "Label" }]}
         dates={[{ label: "01 Aug" }, { label: "01 Aug" }]}
       />
     ),
