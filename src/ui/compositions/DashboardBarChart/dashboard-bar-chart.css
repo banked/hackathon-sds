@@ -1,0 +1,9 @@
+.dashboard-bar-chart {
+  background: var(--sds-color-white-1000);
+  border-radius: var(--sds-size-radius-400);
+  box-shadow: var(--sds-effects-shadows-drop-shadow-600);
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}

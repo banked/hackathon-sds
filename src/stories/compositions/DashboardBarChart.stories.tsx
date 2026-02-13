@@ -1,12 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { GraphHeader } from "compositions";
+import { DashboardBarChart, GraphHeader } from "compositions";
 
-const meta: Meta<typeof GraphHeader> = {
-  component: GraphHeader,
+const meta: Meta<typeof DashboardBarChart> = {
+  component: DashboardBarChart,
   title: "SDS Compositions/Dashboard Bar Chart",
   parameters: { layout: "centered" },
 };
 export default meta;
+
+export const StoryDashboardBarChart: StoryObj<typeof DashboardBarChart> = {
+  name: "Dashboard Bar Chart",
+  args: {
+    title: "Gross Pay Ins",
+    aiButtons: [{ label: "Analyse" }],
+    keys: [{ label: "Key Label" }, { label: "Key Label" }, { label: "Key Label" }],
+    dates: [{ label: "01 Aug" }, { label: "07 Aug" }],
+  },
+  render: (args) => <DashboardBarChart {...args} />,
+};
 
 
 
