@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { GraphHeader } from "compositions";
+import { DashboardBarChart, GraphHeader } from "compositions";
 
 const meta: Meta<typeof GraphHeader> = {
   component: GraphHeader,
@@ -55,6 +55,32 @@ export const StoryGraphHeaderWithoutAI: StoryObj<typeof GraphHeader> = {
   render: (args) => (
     <div style={{ width: 560 }}>
       <GraphHeader {...args} />
+    </div>
+  ),
+};
+
+export const StoryDashboardBarChart: StoryObj<typeof DashboardBarChart> = {
+  name: "Complete Dashboard Bar Chart",
+  args: {
+    header: {
+      title: "Gross Pay Ins",
+      aiButtonLabel: "Analyse",
+    },
+    visualisation: {
+      keys: [
+        { label: "Key Label" },
+        { label: "Key Label" },
+        { label: "Key Label" },
+      ],
+      dates: [
+        { label: "01 Aug" },
+        { label: "07 Aug" },
+      ],
+    },
+  },
+  render: (args) => (
+    <div style={{ width: 560 }}>
+      <DashboardBarChart {...args} />
     </div>
   ),
 };

@@ -1,5 +1,6 @@
 import figma from "@figma/code-connect";
 import {
+  DashboardBarChart,
   GraphHeader,
   GraphVisualisation,
 } from "compositions";
@@ -29,6 +30,25 @@ figma.connect(
       <GraphVisualisation
         keys={[{ label: "Label" }, { label: "Label" }, { label: "Label" }]}
         dates={[{ label: "01 Aug" }, { label: "01 Aug" }]}
+      />
+    ),
+  },
+);
+
+figma.connect(
+  DashboardBarChart,
+  "https://www.figma.com/design/RunXbtjgAaAIsNgvyEndOD/MCP-Design-System?node-id=6-513&m=dev",
+  {
+    example: () => (
+      <DashboardBarChart
+        header={{
+          title: "Title text",
+          aiButtonLabel: "Analyse",
+        }}
+        visualisation={{
+          keys: [{ label: "Label" }, { label: "Label" }, { label: "Label" }],
+          dates: [{ label: "01 Aug" }, { label: "07 Aug" }],
+        }}
       />
     ),
   },
