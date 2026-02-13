@@ -1,8 +1,32 @@
 import figma from "@figma/code-connect";
 import {
+  DashboardBarChart,
   GraphHeader,
   GraphVisualisation,
 } from "compositions";
+
+figma.connect(
+  DashboardBarChart,
+  "https://www.figma.com/design/RunXbtjgAaAIsNgvyEndOD/?node-id=6:513&m=dev",
+  {
+    example: () => (
+      <DashboardBarChart
+        headerProps={{
+          title: "Title text",
+          aiButtons: [
+            { label: "Analyse" },
+            { label: "Analyse" },
+            { label: "Analyse" },
+          ],
+        }}
+        visualisationProps={{
+          keys: [{ label: "Label" }, { label: "Label" }, { label: "Label" }],
+          dates: [{ label: "01 Aug" }, { label: "01 Aug" }],
+        }}
+      />
+    ),
+  },
+);
 
 figma.connect(
   GraphHeader,
