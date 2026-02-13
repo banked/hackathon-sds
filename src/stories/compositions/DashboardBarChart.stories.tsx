@@ -74,6 +74,23 @@ export const StoryGraphHeader: StoryObj<typeof GraphHeader> = {
   ),
 };
 
+export const StoryGraphHeaderMultipleButtons: StoryObj<typeof GraphHeader> = {
+  name: "Graph Header (Multiple AI Buttons)",
+  args: {
+    title: "Title text",
+    aiButtons: [
+      { label: "Analyse" },
+      { label: "Analyse" },
+      { label: "Analyse" },
+    ],
+  },
+  render: (args) => (
+    <div style={{ width: 560 }}>
+      <GraphHeader {...args} />
+    </div>
+  ),
+};
+
 export const StoryGraphHeaderWithoutAI: StoryObj<typeof GraphHeader> = {
   name: "Graph Header (No AI Button)",
   args: {

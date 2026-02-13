@@ -12,12 +12,17 @@ export type GraphHeaderProps = {
   onAiButtonPress?: () => void;
   /** Whether to hide the AI button */
   hideAiButton?: boolean;
+  /** Array of AI button configurations for multiple buttons */
+  aiButtons?: Array<{
+    label: string;
+    onPress?: () => void;
+  }>;
   /** Additional CSS class names */
   className?: string;
 };
 
 /**
- * A graph header composition containing a title, an AI action button,
+ * A graph header composition containing a title, AI action buttons,
  * and a keyline divider. Used at the top of dashboard chart cards.
  */
 export function GraphHeader({
@@ -25,17 +30,21 @@ export function GraphHeader({
   aiButtonLabel = "Analyse",
   onAiButtonPress,
   hideAiButton = false,
+  aiButtons,
   className,
 }: GraphHeaderProps) {
+  // Determine which button configuration to use
+  const buttonsToRender = aiButtons || (hideAiButton ? [] : [{ label: aiButtonLabel, onPress: onAiButtonPress }]);
+
   return (
     <div className={clsx("graph-header", className)}>
       <div className="graph-header-content">
-        {!hideAiButton && (
-          <AIButton size="small" onPress={onAiButtonPress}>
-            {aiButtonLabel}
-          </AIButton>
-        )}
         <span className="graph-header-title">{title}</span>
+        {buttonsToRender.map((button, index) => (
+          <AIButton key={index} size="small" onPress={button.onPress}>
+            {button.label}
+          </AIButton>
+        ))}
       </div>
       <KeylineDivider />
     </div>
