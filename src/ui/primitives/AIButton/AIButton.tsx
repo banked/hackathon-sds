@@ -30,7 +30,7 @@ export const AIButton = React.forwardRef(function AIButton(
 ) {
   const classNames = clsx(className, "ai-button", `ai-button-size-${size}`);
 
-  const iconSize = size === "small" ? "14" : "16";
+  const iconSize = size === "small" ? "14" : "32";
 
   const content = (
     <>
