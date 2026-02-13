@@ -55,6 +55,28 @@ export const WithoutAIButton: StoryObj<typeof DashboardBarChart> = {
   ),
 };
 
+export const ThreeKeys: StoryObj<typeof DashboardBarChart> = {
+  name: "With Three Keys",
+  args: {
+    title: "Multi-metric dashboard",
+    aiButtonLabel: "Analyse",
+    keys: [
+      { label: "Sessions", color: "#008D8B" },
+      { label: "Conversions", color: "#99D8D7" },
+      { label: "Bounce Rate", color: "#CCF0EF" },
+    ],
+    dates: [
+      { label: "01 Aug" },
+      { label: "07 Aug" },
+    ],
+  },
+  render: (args) => (
+    <div style={{ width: 560 }}>
+      <DashboardBarChart {...args} />
+    </div>
+  ),
+};
+
 export const StoryGraphHeader: StoryObj<typeof GraphHeader> = {
   name: "Graph Header",
   args: {

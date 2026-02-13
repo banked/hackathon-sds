@@ -36,6 +36,7 @@ export function GraphVisualisation({
   keys = [
     { label: "Label" },
     { label: "Label" },
+    { label: "Label" },
   ],
   dates = [
     { label: "01 Aug" },
